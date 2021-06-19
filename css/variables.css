@@ -1,0 +1,13 @@
+:root {
+   --main-blue: rgb(44, 80, 241);
+   --main-yellow: #ecc408;
+   --main-grey: #d8caca;
+   --main-font: "Open Sans", sans-serif;
+   --main-shadow: 5px 10px rgba(0, 0, 0, 0.25);
+   --small-shadow: 4px 5px rgba(0, 0, 0, 0.25);
+   --main-animation: 200ms linear;
+}
+.hidden{
+  opacity: 1;
+}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
