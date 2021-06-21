@@ -1,13 +1,18 @@
 :root {
-   --main-blue: rgb(44, 80, 241);
-   --main-yellow: #ecc408;
+   --main-blue: #2b2e4a;
+   --main-red: #e84545;
+   --main-maroon: #903749;
+   --main-purple: #53354A;
    --main-grey: #d8caca;
    --main-font: "Open Sans", sans-serif;
    --main-shadow: 5px 10px rgba(0, 0, 0, 0.25);
    --small-shadow: 4px 5px rgba(0, 0, 0, 0.25);
    --main-animation: 200ms linear;
+   --main-sticky: 300ms cubic-bezier(.36,.12,.46,1.92);
 }
-.hidden{
-  opacity: 1;
+.hidden {
+   opacity: 0;
+   visibility: hidden;
+   pointer-events: none;
 }
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap");
