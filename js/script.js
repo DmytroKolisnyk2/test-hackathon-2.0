@@ -1,3 +1,3 @@
-import { test } from './functions.js';
+import * as functions from './functions.js';
 
-test()
+functions.test()
