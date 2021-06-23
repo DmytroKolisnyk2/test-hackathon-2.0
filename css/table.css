@@ -31,6 +31,15 @@
    background-position: center;
    background-repeat: no-repeat;
    background-size: 80% 80%;
+   cursor: pointer;
+   transition: 500ms all;
+}
+.table__cell:hover {
+   background-color: var(--main-red);
+   box-sizing: border-box;
+   height: 33.3333%;
+   width: 33.3333%;
+   border: 5px var(--main-blue) solid;
 }
 .table__cell--cross {
    background-image: url(../img/cross.png);
