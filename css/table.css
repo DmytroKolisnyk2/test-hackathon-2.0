@@ -30,8 +30,12 @@
    border-radius: var(--main-br);
    background-position: center;
    background-repeat: no-repeat;
+   cursor: pointer;
    background-size: 30% 30%;
    transition:var(--main-sticky);
+}
+.table__cell:hover {
+   background-color: var(--main-red);
 }
 .table__cell--cross {
    background-size: 80% 80%;
