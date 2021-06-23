@@ -14,13 +14,13 @@ export const startGame = (event) => {
       event.target.classList.add("table__cell--zero");
    }
 };
-const box = '<li class="table__cell"></li>';
-const tableRef = document.querySelector(".table");
+state.string = '<li class="table__cell"></li>';
+state.tableRef = document.querySelector(".table");
 
 export const drawTable = () => {
-   tableRef.innerHTML = "";
+   state.tableRef.innerHTML = "";
    for (let i = 0; i < 9; i += 1) {
-      tableRef.insertAdjacentHTML("beforeend", box);
+      state.tableRef.insertAdjacentHTML("beforeend", state.string);
    }
-   tableRef.addEventListener("click", startGame);
+   state.tableRef.addEventListener("click", startGame);
 };
