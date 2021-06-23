@@ -9,6 +9,7 @@
    --small-shadow: 4px 5px rgba(0, 0, 0, 0.25);
    --main-animation: 200ms linear;
    --main-sticky: 300ms cubic-bezier(.36,.12,.46,1.92);
+   --main-br: 11px;
 }
 .hidden {
    opacity: 0;
