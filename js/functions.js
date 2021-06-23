@@ -14,13 +14,13 @@ export const startGame = (event) => {
       event.target.classList.add("table__cell--zero");
    }
 };
-const boxes = ['<li class="table__cell"></li><li class="table__cell"></li><li class="table__cell"></li><li class="table__cell"></li><li class="table__cell"></li><li class="table__cell"></li><li class="table__cell"></li><li class="table__cell"></li><li class="table__cell"></li>'];
+const box = '<li class="table__cell"></li>';
 const tableRef = document.querySelector(".table");
 
 export const drawTable = () => {
    tableRef.innerHTML = "";
-   boxes.forEach((item) => {
-      tableRef.insertAdjacentHTML("afterbegin", item);
-   });
+   for (let i = 0; i < 9; i += 1) {
+      tableRef.insertAdjacentHTML("beforeend", box);
+   }
    tableRef.addEventListener("click", startGame);
 };
