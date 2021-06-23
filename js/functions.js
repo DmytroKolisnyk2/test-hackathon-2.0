@@ -1,1 +1,1 @@
-export const test = () => console.log('test');
+  const startGame = () => console.log('test');
