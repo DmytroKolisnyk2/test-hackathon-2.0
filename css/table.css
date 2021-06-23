@@ -30,21 +30,22 @@
    border-radius: var(--main-br);
    background-position: center;
    background-repeat: no-repeat;
-   background-size: 80% 80%;
    cursor: pointer;
-   transition: 500ms all;
+   background-size: 30% 30%;
+   transition:var(--main-sticky);
 }
 .table__cell:hover {
    background-color: var(--main-red);
-   box-sizing: border-box;
-   height: 33.3333%;
-   width: 33.3333%;
-   border: 5px var(--main-blue) solid;
 }
 .table__cell--cross {
+   background-size: 80% 80%;
+background-color: var(--main-red);
    background-image: url(../img/cross.png);
 }
 .table__cell--zero {
+   background-size: 100% 100%;
+background-color: var(--main-red);
+
    background-image: url(../img/zero.png);
 }
 .game__player-move {

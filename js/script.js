@@ -1,8 +1,4 @@
 import * as functions from './functions.js';
 
-{/* <li class="table__cell"></li> */ }
-// const table = document.querySelectorAll('.table__cell');
+functions.drawTable();
 
-// table.forEach((el) => {
-//   el.addEventListener('click', functions.checkForEnd(table));
-// });
