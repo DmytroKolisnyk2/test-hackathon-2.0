@@ -5,8 +5,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width,initial-scale=1" />
       <link rel="stylesheet" href="./css/styles.css" />
-      <meta name="author" content="HOPE team" />
-      <meta name="keywords" content="Brawl Stars, popular game, memory game, card game, Brawl Stars cards, memo game, HOPE team" />
+      <meta name="author" content="HOPE team"/>
       <link rel="shortcut icon" href="./img/logo.ico" type="image/x-icon" />
       <title>Test hackathon 2.0</title>
    </head>
@@ -14,7 +13,7 @@
       <div class="wrapper__header__tic_toc_toe hidden-modal">
          <header class="tic_tac__header">
             <div class="header__content">
-               <a target="_blank" href="https://github.com/DmytroKolisnyk2/test-hackathon-2.0"><img class="content__img" src="./img/logo.jpg" alt="logo_team" /></a>
+               <a target="_blank" href="https://github.com/DmytroKolisnyk2/test-hackathon-2.0"> <img class="content__img" src="./img/logo.jpg" alt="logo_team" /></a>
                <h1 class="content__title">Tic Tac Toe by HOPE team</h1>
                <h2 class="content__reset">Replay</h2>
             </div>
@@ -31,18 +30,20 @@
             <button class="settings_btn settings_btn--js">
                <img class="settings_btn_img" class="settings-modal__audio-ico hidden-modal" src="./img/logo.jpg" alt="logo_team" />
             </button>
-            <h1 class="start_screen_title">Project by Team HOPE</h1>
-            <div class="start__controls-wrapper">
-               <button class="start__btn start__open-modal start__btn-text" type="button">play</button>
-               <button type="button" class="start__author start__author--js start__open-modal start__controls">Authors</button>
+            <div class="start__content-wrapper">
+               <h2 class="start_screen_title">Project by Team HOPE</h2>
+               <div class="start__controls-wrapper">
+                  <button class="start__btn start__open-modal start__btn-text" type="button">play</button>
+                  <button type="button" class="start__author start__author--js start__open-modal start__controls">Authors</button>
+               </div>
             </div>
          </section>
          <section class="backdrop_authors_modal modal hidden-modal" id="authors">
             <div class="authors-modal modal">
                <div data-modal="authors" class="authors_close close-btn--js">
-                     <svg class="authors-modal__close-btn">
-                        <use href="./img/symbol-defs.svg#icon-cross"></use>
-                     </svg>
+                  <svg class="authors-modal__close-btn">
+                     <use href="./img/symbol-defs.svg#icon-cross"></use>
+                  </svg>
                </div>
                <div class="authors_content">
                   <h2 class="authors_title">authors of this game</h2>
@@ -93,7 +94,7 @@
             </div>
          </section>
 
-         <section class="backdrop_settings_modal modal hidden-modal" id='settings'>
+         <section class="backdrop_settings_modal modal hidden-modal" id="settings">
             <div class="settings-modal modal">
                <svg class="settings-modal__close-btn close-btn--js" data-modal="settings">
                   <use href="./img/symbol-defs.svg#icon-cross"></use>
@@ -120,18 +121,39 @@
                </div>
             </div>
          </section>
+         <section class="win win--js modal hidden-modal">
+            <div class="win__content-wrapper">
+               <h2 class="win__headline">You WIN!</h2>
+               <button data-modal="win--js" class="win__btn win__open-modal win__menu--js" type="button">
+                  <span   class="win__btn-text ">Back to menu</span></button
+               ><button data-modal="win--js" class="win__btn win__open-modal win__replay--js" type="button">
+                  <span  class="win__btn-text">Replay</span>
+               </button>
+            </div>
+            <img class="win__img" src="./img/win.png" alt="win-image" />
+         </section>
+         <section class="win draw modal hidden-modal">
+            <div class="win__content-wrapper">
+               <h2 class="draw__headline">Draw!</h2>
+               <button data-modal="draw" class="win__btn win__open-modal win__menu--js" type="button">
+                  <span class="win__btn-text ">Back to menu</span></button
+               ><button data-modal="draw"  class="win__btn win__open-modal win__replay--js" type="button">
+                  <span class="win__btn-text">Replay</span>
+               </button>
+            </div>
+            <img class="win__img" src="./img/draw.png" alt="win-image" />
+         </section>
       </main>
       <div class="audio">
-    <audio data-volume="1" loop='loop' src="./music/main_theme.mp3" class="audio__main-theme"></audio>
-    <audio data-volume="0.75" loop='loop' src="./music/gameplay.mp3" class="audio__game-play"></audio>
-    <audio data-volume="1" src="./music/won_sound.mp3" class="audio__won"></audio>
-    <audio data-volume="1" src="./music/countdown.mp3" class="audio__countdown"></audio>
-    <audio data-volume="1" src="./music/lose_sound.mp3" class="audio__lose"></audio>
-    <audio data-volume="1" src="./music/correct.mp3" class="audio__correct"></audio>
-    <audio data-volume="1" src="./music/flip.mp3" class="audio__flip"></audio>
-    <audio data-volume="1" src="./music/little-time.mp3" class="audio__little-time"></audio>
-
-  </div>
+         <audio data-volume="1" loop="loop" src="./music/main_theme.mp3" class="audio__main-theme"></audio>
+         <audio data-volume="0.75" loop="loop" src="./music/gameplay.mp3" class="audio__game-play"></audio>
+         <audio data-volume="1" src="./music/won_sound.mp3" class="audio__won"></audio>
+         <audio data-volume="1" src="./music/countdown.mp3" class="audio__countdown"></audio>
+         <audio data-volume="1" src="./music/lose_sound.mp3" class="audio__lose"></audio>
+         <audio data-volume="1" src="./music/correct.mp3" class="audio__correct"></audio>
+         <audio data-volume="1" src="./music/flip.mp3" class="audio__flip"></audio>
+         <audio data-volume="1" src="./music/little-time.mp3" class="audio__little-time"></audio>
+      </div>
       <script src="./js/script.js" type="module"></script>
    </body>
 </html>

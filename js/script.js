@@ -1,22 +1,19 @@
 import * as functions from "./functions.js";
 
-// functions.getOverRounds();
-functions.drawTable();
-document.querySelector(".content__reset").addEventListener("click", () => {
-   functions.drawTable();
-   localStorage.clear();
-});
+document.querySelector(".content__reset").addEventListener("click", functions.drawTable);
 const refs = {};
 window.localStorage.setItem("volume", window.localStorage.getItem("volume") || 1);
 window.localStorage.setItem("bg", window.localStorage.getItem("bg") || 1);
 refs.volume = +window.localStorage.getItem("volume");
 document.querySelector(".main").style.backgroundImage = `url(./img/bg${localStorage.getItem("bg")}.jpg)`;
 document.querySelector(".start__btn").addEventListener("click", () => {
+   functions.drawTable();
    document.querySelector(".wrapper__header__tic_toc_toe").classList.remove("hidden-modal");
    document.querySelector(".game").classList.remove("hidden-modal");
    document.querySelector(".start").classList.add("hidden-modal");
+   document.querySelector(".audio__main-theme").pause();
    document.querySelector(".audio__game-play").play();
-  document.querySelectorAll(".logo").forEach((item) => item.classList.add("hidden-modal"));
+   document.querySelectorAll(".logo").forEach((item) => item.classList.add("hidden-modal"));
 });
 const keyCloseModal = (event) => {
    if (event.code === "Escape") {
@@ -44,7 +41,7 @@ document.querySelectorAll(".settings_btn--js").forEach((btn) =>
    })
 );
 document.querySelectorAll(".close-btn--js").forEach((element) => {
-   element.addEventListener('click', (event) =>document.querySelector(`#${event.currentTarget.dataset.modal}`).classList.add('hidden-modal'));
+   element.addEventListener("click", (event) => document.querySelector(`#${event.currentTarget.dataset.modal}`).classList.add("hidden-modal"));
 });
 document.querySelector(".backdrop_settings_modal").addEventListener("click", backDropCloseModal);
 
@@ -86,4 +83,21 @@ document.querySelector(".settings-modal__background-wrapper").addEventListener("
    event.target.parentNode.querySelector(".settings-modal__background--active").classList.remove("settings-modal__background--active");
    event.target.classList.add("settings-modal__background--active");
    document.querySelector(".main").style.backgroundImage = `url(./img/bg${event.target.dataset.bg}.jpg)`;
+});
+document.querySelectorAll(".win__menu--js").forEach((element) => {
+   element.addEventListener("click", (event) => {
+      document.querySelector(".audio__main-theme").play();
+      document.querySelector(".wrapper__header__tic_toc_toe").classList.add("hidden-modal");
+      document.querySelector(".game").classList.add("hidden-modal");
+      document.querySelector(".start").classList.remove("hidden-modal");
+      document.querySelector(`.${event.currentTarget.dataset.modal}`).classList.add("hidden-modal");
+   });
+});
+document.querySelectorAll(".win__replay--js").forEach((element) => {
+   element.addEventListener("click", (event) => {
+      document.querySelector(".audio__game-play").currentTime = 0;
+      document.querySelector(".audio__game-play").play();
+      functions.drawTable();
+      document.querySelector(`.${event.currentTarget.dataset.modal}`).classList.add("hidden-modal");
+   });
 });

@@ -1,5 +1,6 @@
 .main {
    background-color: var(--main-red);
+   overflow: hidden;
 }
 .game {
    text-align: center;
@@ -8,7 +9,6 @@
    align-items: center;
    min-height: 100vh;
    flex-wrap: wrap;
-   
 }
 
 .table {
@@ -53,7 +53,9 @@ background-color: var(--main-red);
    font-size: 50px;
    font-family: var(--main-font);
    font-weight: 600;
+   color: var(--main-grey)
 }
 .game__content-wrapper{
+  padding-top: 80px;               
   width: 100%;
 }

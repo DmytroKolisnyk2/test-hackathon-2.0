@@ -34,5 +34,7 @@
    background-size: cover;
    background-position: center;
    background-repeat: no-repeat;
+   background-image: url("../img/bg1.jpg");
+   min-height: 100vh;
 }
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap");
