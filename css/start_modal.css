@@ -97,8 +97,17 @@
 .settings_btn:hover .settings_btn_img{
    transform: scale(1.2) rotate(90deg);
 }
-
-
+.hidden-modal {
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    position: absolute;
+    visibility: hidden;
+    z-index: -1;
+    transition: 400ms linear;
+ 
+ }
 
 
 
@@ -399,7 +408,7 @@
  }
 
 
- 
+
  .pause {
     background-color: var(--main-grey);
     border: 1px black solid;
