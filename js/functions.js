@@ -53,12 +53,11 @@ const handleResultValidation = () => {
          continue;
       }
       if (a === b && b === c) {
-         endGame("win", a);
          drawLine(winningConditions[i]);
-         return;
-      } else if (state.move === 10) {
-         setTimeout(() => endGame("draw", 0), 500);
-         return;
+         return setTimeout(endGame, 200, "win", a);
+      }
+      if (state.move === 10) {
+         return setTimeout(endGame, 300, "draw", 0);
       }
       // else {
       //    if (state.move === 9) setTimeout(() => endGame("draw", 0), 500);
