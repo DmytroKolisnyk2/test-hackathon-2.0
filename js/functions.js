@@ -86,4 +86,5 @@ export const getOverRounds = () => {
   if (+state.roundRef >= 9 || +state.roundRef <= 0) {
     return getOverRounds();
   }
+  drawTable()
 };
