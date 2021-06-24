@@ -37,8 +37,6 @@
 }
 .table__cell:hover {
    background-color: var(--main-red);
-   box-sizing: border-box;
-   border: 5px var(--main-blue) solid;
 }
 .table__line {
    width: 35%;

@@ -30,50 +30,45 @@ const winningConditions = [
   [2, 4, 6]
 ];
 function drawLine(winCondition) {
-  console.log(winCondition);
-
   if (winCondition[0] === 0 && winCondition[1] === 1 && winCondition[2] === 2 ) {
-    document.querySelector('.table__line').style.display = "block";
+    document.querySelector('[data-cell-index="0"]').style.backgroundColor = "var(--main-grey)";
+    document.querySelector('[data-cell-index="1"]').style.backgroundColor = "var(--main-grey)";
+    document.querySelector('[data-cell-index="2"]').style.backgroundColor = "var(--main-grey)";
   }
   if (winCondition[0] === 3 && winCondition[1] === 4 && winCondition[2] === 5) {
-    document.querySelector('.table__line').style.display = "block";
-    document.querySelector('.table__line').style.top = "calc(33.3333% / 0.8)";
+    document.querySelector('[data-cell-index="3"]').style.backgroundColor = "var(--main-grey)";
+    document.querySelector('[data-cell-index="4"]').style.backgroundColor = "var(--main-grey)";
+    document.querySelector('[data-cell-index="5"]').style.backgroundColor = "var(--main-grey)";
   }
   if (winCondition[0] === 6 && winCondition[1] === 7 && winCondition[2] === 8) {
-    document.querySelector('.table__line').style.display = "block";
-    document.querySelector('.table__line').style.top = "calc(33.3333% / 0.5)";
+    document.querySelector('[data-cell-index="6"]').style.backgroundColor = "var(--main-grey)";
+    document.querySelector('[data-cell-index="7"]').style.backgroundColor = "var(--main-grey)";
+    document.querySelector('[data-cell-index="8"]').style.backgroundColor = "var(--main-grey)";
   }
   if (winCondition[0] === 0 && winCondition[1] === 3 && winCondition[2] === 6) {
-    document.querySelector('.table__line').style.display = "block";
-    document.querySelector('.table__line').style.transform = "rotate(90deg)";
-    document.querySelector('.table__line').style.left = "20.5%";
-    document.querySelector('.table__line').style.top = "40%";
+    document.querySelector('[data-cell-index="0"]').style.backgroundColor = "var(--main-grey)";
+    document.querySelector('[data-cell-index="3"]').style.backgroundColor = "var(--main-grey)";
+    document.querySelector('[data-cell-index="6"]').style.backgroundColor = "var(--main-grey)";
   }
   if (winCondition[0] === 1 && winCondition[1] === 4 && winCondition[2] === 7) {
-    document.querySelector('.table__line').style.display = "block";
-    document.querySelector('.table__line').style.transform = "rotate(90deg)";
-    document.querySelector('.table__line').style.left = "33.3333%";
-    document.querySelector('.table__line').style.top = "40%";
+    document.querySelector('[data-cell-index="1"]').style.backgroundColor = "var(--main-grey)";
+    document.querySelector('[data-cell-index="4"]').style.backgroundColor = "var(--main-grey)";
+    document.querySelector('[data-cell-index="7"]').style.backgroundColor = "var(--main-grey)";
   }
   if (winCondition[0] === 2 && winCondition[1] === 5 && winCondition[2] === 8) {
-    document.querySelector('.table__line').style.display = "block";
-    document.querySelector('.table__line').style.transform = "rotate(90deg)";
-    document.querySelector('.table__line').style.left = "45%";
-    document.querySelector('.table__line').style.top = "40%";
+    document.querySelector('[data-cell-index="2"]').style.backgroundColor = "var(--main-grey)";
+    document.querySelector('[data-cell-index="5"]').style.backgroundColor = "var(--main-grey)";
+    document.querySelector('[data-cell-index="8"]').style.backgroundColor = "var(--main-grey)";
   }
   if (winCondition[0] === 0 && winCondition[1] === 4 && winCondition[2] === 8) {
-    document.querySelector('.table__line').style.display = "block";
-    document.querySelector('.table__line').style.left = "28%";
-    document.querySelector('.table__line').style.top = "35%";
-    document.querySelector('.table__line').style.width = "40%";
-    document.querySelector('.table__line').style.transform = "rotate(45deg)";
+    document.querySelector('[data-cell-index="0"]').style.backgroundColor = "var(--main-grey)";
+    document.querySelector('[data-cell-index="4"]').style.backgroundColor = "var(--main-grey)";
+    document.querySelector('[data-cell-index="8"]').style.backgroundColor = "var(--main-grey)";
   }
   if (winCondition[0] === 2 && winCondition[1] === 4 && winCondition[2] === 6) {
-    document.querySelector('.table__line').style.display = "block";
-    document.querySelector('.table__line').style.left = "32.5%";
-    document.querySelector('.table__line').style.top = "35%";
-    document.querySelector('.table__line').style.width = "40%";
-    document.querySelector('.table__line').style.transform = "rotate(-45deg)";
+    document.querySelector('[data-cell-index="2"]').style.backgroundColor = "var(--main-grey)";
+    document.querySelector('[data-cell-index="4"]').style.backgroundColor = "var(--main-grey)";
+    document.querySelector('[data-cell-index="6"]').style.backgroundColor = "var(--main-grey)";
   }
 
 }
