@@ -37,4 +37,8 @@
    background-image: url("../img/bg1.jpg");
    min-height: 100vh;
 }
+button:hover{
+   transform: scale(1.05);
+   transition: var(--main-animation);
+}
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap");

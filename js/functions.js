@@ -1,6 +1,8 @@
 const state = {};
 state.move = 1;
 state.playerMoveRef = document.querySelector(".game__player-move--js");
+state.blocked = false;
+
 const winningConditions = [
    [0, 1, 2],
    [3, 4, 5],
@@ -14,7 +16,7 @@ const winningConditions = [
 let gameState = ["", "", "", "", "", "", "", "", ""];
 
 export const startGame = (event) => {
-   if (event.target.classList.contains("table") || event.target.classList.contains("table__cell--cross") || event.target.classList.contains("table__cell--zero")) return;
+   if (state.blocked || event.target.classList.contains("table") || event.target.classList.contains("table__cell--cross") || event.target.classList.contains("table__cell--zero")) return;
    if (state.move % 2 === 1) {
       state.move++;
       state.playerMoveRef.textContent = 2;
@@ -31,6 +33,7 @@ export const startGame = (event) => {
 state.tableRef = document.querySelector(".table");
 
 export const drawTable = () => {
+   state.blocked = false;
    state.tableRef.innerHTML = "";
    state.move = 1;
    state.playerMoveRef.textContent = 1;
@@ -53,18 +56,17 @@ const handleResultValidation = () => {
          continue;
       }
       if (a === b && b === c) {
+         console.log("win");
          drawLine(winningConditions[i]);
          return setTimeout(endGame, 200, "win", a);
       }
-      if (state.move === 10) {
-         return setTimeout(endGame, 300, "draw", 0);
-      }
-      // else {
-      //    if (state.move === 9) setTimeout(() => endGame("draw", 0), 500);
-      // }
+   }
+   if (state.move === 10) {
+      return setTimeout(endGame, 300, "draw", 0);
    }
 };
 const endGame = (result, winner) => {
+   state.blocked = true;
    document.querySelector(".audio__game-play").pause();
 
    if (result === "win") {
@@ -138,35 +140,3 @@ function drawLine(winCondition) {
       document.querySelector('[data-index="6"]').style.backgroundColor = "var(--main-grey)";
    }
 }
-// function handleResultValidation() {
-//    let roundWon = false;
-//    for (let i = 0; i <= 7; i++) {
-//       let winCondition = winningConditions[i];
-//       let a = gameState[winCondition[0]];
-//       let b = gameState[winCondition[1]];
-//       let c = gameState[winCondition[2]];
-//       if (a === "" || b === "" || c === "") {
-//          continue;
-//       }
-//       if (a === b && b === c) {
-//          roundWon = true;
-//          drawLine(winningConditions[i]);
-//          break;
-//       }
-//    }
-
-//    if (roundWon) {
-//       statusDisplay.innerHTML = winningMessage();
-//       gameActive = false;
-//       return;
-//    }
-
-//    let roundDraw = !gameState.includes("");
-//    console.log(!gameState.includes(""));
-//    if (roundDraw) {
-//       statusDisplay.innerHTML = drawMessage();
-//       gameActive = false;
-//       return;
-//    }
-//    handlePlayerChange();
-// }
